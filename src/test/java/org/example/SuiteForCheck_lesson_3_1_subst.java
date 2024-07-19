@@ -1,11 +1,12 @@
 package org.example;
+
 import org.junit.platform.suite.api.IncludeTags;
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.Suite;
 
 @Suite
 @SelectPackages("org.example")
-@IncludeTags("Сумма")
-public class TestSuiteForCheck_lesson_3_1_sum {
+@IncludeTags("Вычитание")
+public class SuiteForCheck_lesson_3_1_subst {
 
 }

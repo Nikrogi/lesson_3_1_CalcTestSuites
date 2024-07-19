@@ -1,10 +1,12 @@
 package org.example;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.*;
 class TestForCheck_lesson_3_1 {
 
     @ParameterizedTest(name = "#{index} - сложение {0} и {1}, ожидаем {2}")
@@ -25,7 +27,7 @@ class TestForCheck_lesson_3_1 {
     @Tag("Вычитание")
     void subtraction(int a, int b, int expectedResult) {
         Calc calc = new Calc();
-        int resultSubtraction = calc.subtraction(a,b);
+        int resultSubtraction = calc.subtraction(a, b);
         Assertions.assertEquals(expectedResult, resultSubtraction, "Неправильный ответ");
     }
 }

@@ -4,20 +4,22 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.*;
 class CalcTest {
     @BeforeAll
     public static void setupAll() {
         System.out.println("Before All");
     }
+
     @BeforeEach
     public void setupEach() {
         System.out.println("Before Each");
     }
+
     @AfterAll
     public static void afterAll() {
         System.out.println("After All");
     }
+
     @AfterEach
     public void afterEach() {
         System.out.println("After Each");
@@ -39,11 +41,11 @@ class CalcTest {
     @Tag("subst")
     void subtraction() {
         Calc calc = new Calc();
-        int resultSubtraction = calc.subtraction(15,4);
+        int resultSubtraction = calc.subtraction(15, 4);
         Assertions.assertEquals(11, resultSubtraction, "Неправильный ответ");
     }
 
-    @ParameterizedTest (name = "#{index} - сложение {0} и {1}, ожидаем {2}")
+    @ParameterizedTest(name = "#{index} - сложение {0} и {1}, ожидаем {2}")
     @DisplayName("Второй тест суммирования")
     @CsvSource({"1, 2, 3", "-1, 2, 1", "0, 0, 0"})
     @Timeout(10)
@@ -60,7 +62,7 @@ class CalcTest {
     @Tag("subst")
     void subtraction2() {
         Calc calc = new Calc();
-        int resultSubtraction = calc.subtraction(15,4);
+        int resultSubtraction = calc.subtraction(15, 4);
         Assertions.assertEquals(11, resultSubtraction, "Неправильный ответ");
     }
 }
